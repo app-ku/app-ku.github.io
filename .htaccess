@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  #RewriteBase /
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^ index.php [QSA,L]
+  php_value memory_limit 1000M
+  php_value max_execution_time 6000000
+  php_value session.auto_start 0
+</IfModule>
+
